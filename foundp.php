@@ -1,0 +1,47 @@
+<?php
+include ('./conn.php');
+echo "hi";
+if(isset($_POST['submit'])){
+    echo "hi22";
+    $name = $_POST['name'];
+    $contact = $_POST['contact'];
+    $email = $_POST['email'];
+    $petfound = $_POST['petfound'];
+    $country = $_POST['country'];
+    $region = $_POST['region'];
+    $city = $_POST['city'];
+    $image = $_FILES['image'];
+    $imagefilename=$image['name'];
+    $imagefiletemp=$image['tmp_name'];
+    $filename_seperate=explode('.',$imagefilename);
+    $file_extension=strtolower(end($filename_seperate));
+    $extension=array('jpg','jpeg','png');
+    if(in_array($file_extension,$extension)){
+        $upload_image='images/'.$imagefilename;
+        move_uploaded_file($imagefiletemp,$upload_image);
+        $sql="insert into `founds` (name,contact,email,petfound,country,region,city, image) values('$name','$contact','$email','$petfound','$country','$region','$city','$upload_image')";
+        $result=mysqli_query($conn,$sql);
+        if($result)
+        {
+            echo "data entered successfully";
+        }
+        else
+        {
+            die (mysqli_error($conn));
+        }
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image entry</title>
+</head>
+<body>
+    
+</body>
+</html>

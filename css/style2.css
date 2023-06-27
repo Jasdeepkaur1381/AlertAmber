@@ -1,0 +1,74 @@
+.fnd {
+    border: none;
+    outline: none;
+    border-bottom: grey;
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+}
+
+.lab {
+    width: 15%;
+    outline: none;
+    padding: 15px 15px;
+    padding-top: 35px;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    height: 3.5rem;
+    margin-top: 1rem;
+}
+
+#btn-found {
+    width: 20%;
+    margin: auto;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    font-size: x-large;
+}
+
+#btn-found:hover {
+    background: var(--orange);
+}
+
+
+.imagePet {
+    padding: 1rem;
+    font-size: x-large;
+    justify-content: flex-start;
+}
+
+.form-found {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-center-found {
+    font-size: xx-large;
+    text-align: center;
+    align-self: center;
+}
+
+.form1div {
+    display: flex;
+    flex-direction: column;
+}
+
+.foundHead {
+    color: var(--primary);
+    text-align: center;
+}
